@@ -31,12 +31,35 @@ FROM products;
 
 -- find all employees whose first name starts with the letter ‘j’
 
+SELECT * 
+FROM employees WHERE FirstName LIKE 'j%';
+
 -- find all Macbooks
+SELECT *
+From products WHERE Name = "Macbook";
 
 -- find all products that are on sale
+SELECT *
+FROM products WHERE OnSale = 1;
 
 -- find the average price of all products
+SELECT AVG(Price)
+From products;
 
 -- find all Geek Squad employees who don't have a middle initial
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    MiddleInitial IS NULL;
 
--- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
+-- find all products from the products table whose stock level is in the range 
+
+-- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
+
+SELECT * FROM products 
+WHERE StockLevel BETWEEN 500 AND 1200
+ORDER BY StockLevel ASC;
+
+
