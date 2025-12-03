@@ -47,12 +47,8 @@ SELECT AVG(Price)
 From products;
 
 -- find all Geek Squad employees who don't have a middle initial
-SELECT 
-    *
-FROM
-    employees
-WHERE
-    MiddleInitial IS NULL;
+SELECT * FROM employees
+WHERE MiddleInitial IS NULL;
 
 -- find all products from the products table whose stock level is in the range 
 
